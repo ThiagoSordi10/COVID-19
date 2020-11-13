@@ -19,3 +19,14 @@ Em seguida, o comando para rodar o ambiente para desenvolvimento
  <h4>Bom, já temos os dados para treinar e testar, e temos os labels para validar, que são o número de novos casos no dia simplesmente. Também de forma arbitrária foi escolhido o valor de 67% do conjunto de dados para treino e 33% para testes, apenas por ter dado bons resultados. Foram testados alguns modelos de regressão linear do SKLearn, como: LinearRegression, GradientBoostingRegressor, RidgeCV, entre outros. Mas o que mais se destacou foi o Lars. O score do modelo ficou na faixa de 97%. </h4>
 
  <h4>O modelo então é salvo em um arquivo, para que seja carregado e utilizado quando o programa que o usuário executa para prever os novos casos ao longo dos dias.</h4>
+
+ <h1>Produção:</h1>
+
+ <h4>Foram separados em dois arquivos: build_model.py e predict.py. O build_model.py serve para atualizar o modelo diariamente, baseado nos dados reais, ele após treinar o novo modelo, salva-o como arquivo.</h4>
+
+ <h5>Executar com Docker</h5>
+ docker run --rm -it -v "%cd%":/usr/src/app -w /usr/src/app faizanbashir/python-datascience:3.6 python build_model.py
+
+<h4>Enquanto o predict.py seria o arquivo destinado ao usuário com ele basta passar o número de dias como parâmetro que terá a saida desejada.</h4>
+<h5>Executar com Docker</h5>
+ docker run --rm -it -v "%cd%":/usr/src/app -w /usr/src/app faizanbashir/python-datascience:3.6 python predict.py <numero de dias>

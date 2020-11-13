@@ -21,6 +21,7 @@ def prepare_data(df):
     print("Preparando dados")
     # Cases will be used as input for the model
     cases = df['new_cases'].to_numpy()
+    save('cases.sav', cases)
 
     # Build an array of days to use to plot and when the user enter with the number of days ahead to predict
     days = []
@@ -69,13 +70,11 @@ def build_model(df):
     print("Modelo montado")
     return model
 
-def save_model(model):
-    # save the model to disk
-    filename = 'model.sav'
-    pickle.dump(model, open(filename, 'wb'))
+def save(filename, obj):
+    pickle.dump(obj, open(filename, 'wb'))
 
 
 df = build_df()
 model = build_model(df)
-save_model(model)
+save('model.sav', model)
 print("FIM")
