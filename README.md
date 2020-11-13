@@ -2,14 +2,14 @@
 Predizer o número de casos de COVID-19 mundialmente
 
  <h1>Ambiente de desenvolvimento:</h1>
- Primeiro será baixado o ambiente para construção e treino do modelo e ambiente.<br>
+ Primeiro será baixado o ambiente para construção e treino do modelo e ambiente.
  ```docker pull jupyter/datascience-notebook```
  <br>
 Em seguida, o comando para rodar o ambiente para desenvolvimento
  ```docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "%cd%":/home/jovyan/work jupyter/datascience-notebook```
 <br>
  Será gerada uma URL com token, basta copiá-la e acessar os arquivos.
-
+ <br>
  Link de apoio: https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
  
  <h3>Ideia</h3>
@@ -26,14 +26,9 @@ Em seguida, o comando para rodar o ambiente para desenvolvimento
  <h1>Produção:</h1>
 
  <h4>Foram separados em dois arquivos: build_model.py e predict.py. O build_model.py serve para atualizar o modelo diariamente, baseado nos dados reais, ele após treinar o novo modelo, salva-o como arquivo.</h4>
-
  <h5>Executar com Docker</h5>
- ```
- docker run --rm -it -v "%cd%":/usr/src/app -w /usr/src/app faizanbashir/python-datascience:3.6 python build_model.py
- ```
+ ```docker run --rm -it -v "%cd%":/usr/src/app -w /usr/src/app faizanbashir/python-datascience:3.6 python build_model.py```
 
 <h4>Enquanto o predict.py seria o arquivo destinado ao usuário com ele basta passar o número de dias como parâmetro que terá a saida desejada.</h4>
 <h5>Executar com Docker</h5>
- ```
- docker run --rm -it -v "%cd%":/usr/src/app -w /usr/src/app faizanbashir/python-datascience:3.6 python predict.py <numero de dias>
- ```
+ ```docker run --rm -it -v "%cd%":/usr/src/app -w /usr/src/app faizanbashir/python-datascience:3.6 python predict.py <numero de dias>```
