@@ -6,7 +6,6 @@ Predizer o número de casos de COVID-19 mundialmente
  ```
  docker pull jupyter/datascience-notebook
  ```
-<br>
 Em seguida, o comando para rodar o ambiente para desenvolvimento
  ```
  docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "%cd%":/home/jovyan/work jupyter/datascience-notebook
