@@ -3,14 +3,11 @@ Predizer o número de casos de COVID-19 mundialmente
 
  <h1>Ambiente de desenvolvimento:</h1>
  Primeiro será baixado o ambiente para construção e treino do modelo e ambiente.<br>
- ```
- docker pull jupyter/datascience-notebook
- ```
+ ```docker pull jupyter/datascience-notebook```
+ <br>
 Em seguida, o comando para rodar o ambiente para desenvolvimento
- ```
- docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "%cd%":/home/jovyan/work jupyter/datascience-notebook
- ```
-
+ ```docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "%cd%":/home/jovyan/work jupyter/datascience-notebook```
+<br>
  Será gerada uma URL com token, basta copiá-la e acessar os arquivos.
 
  Link de apoio: https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
