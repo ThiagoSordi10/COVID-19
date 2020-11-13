@@ -32,3 +32,6 @@ Predizer o número de casos de COVID-19 mundialmente
  <pre><code>docker run --rm -it -v "%cd%":/usr/src/app -w /usr/src/app faizanbashir/python-datascience:3.6 python predict.py <numero de dias></code></pre>
  
  <h4>Para a previsão ele vai gerando dia a dia, e salvando a previsão no array de novos casos para usar como entrada para prever o dia seguinte.</h4>
+ 
+ <h1>Publicação:</h1>
+ <h4>Para publicar seria interessante pensar em um front web que interagisse ou "direto" (através de um back-end) com o modelo salvo, ou então, com um banco não-relacional que se atualizasse todos os dias, contendo os números de previsão para dias seguintes</h4>
