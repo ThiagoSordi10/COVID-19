@@ -30,3 +30,5 @@ Predizer o número de casos de COVID-19 mundialmente
 <h4>Enquanto o predict.py seria o arquivo destinado ao usuário, com ele basta passar o número de dias como parâmetro, que terá a saida desejada.</h4>
 <h5>Executar com Docker</h5>
  <pre><code>docker run --rm -it -v "%cd%":/usr/src/app -w /usr/src/app faizanbashir/python-datascience:3.6 python predict.py <numero de dias></code></pre>
+ 
+ <h4>Para a previsão ele vai gerando dia a dia, e salvando a previsão no array de novos casos para usar como entrada para prever o dia seguinte.</h4>
