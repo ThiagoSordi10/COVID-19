@@ -19,7 +19,7 @@ Predizer o número de casos de COVID-19 mundialmente
 
  <h4>Bom, já temos os dados para treinar e testar, e temos os labels para validar, que são o número de novos casos no dia simplesmente. Também de forma arbitrária foi escolhido o valor de 67% do conjunto de dados para treino e 33% para testes, apenas por ter dado bons resultados. Foram testados alguns modelos de regressão linear do SKLearn, como: LinearRegression, GradientBoostingRegressor, RidgeCV, entre outros. Mas o que mais se destacou foi o Lars. O score do modelo ficou na faixa de 97%. </h4>
 
- <h4>O modelo então é salvo em um arquivo, para que seja carregado e utilizado quando o programa que o usuário executa para prever os novos casos ao longo dos dias.</h4>
+ <h4>O modelo então é salvo em um arquivo, para que seja carregado e utilizado quando o programa que o usuário usa para prever os novos casos ao longo dos dias é executado.</h4>
 
  <h1>Produção:</h1>
 
