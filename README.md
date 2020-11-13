@@ -2,7 +2,7 @@
 Predizer o número de casos de COVID-19 mundialmente
 
  <h1>Ambiente de desenvolvimento:</h1>
- Primeiro será baixado o ambiente para construção e treino do modelo e ambiente.
+ Primeiro será baixado o ambiente para construção e treino do modelo e ambiente.<br>
  ```docker pull jupyter/datascience-notebook```
 <br>
 Em seguida, o comando para rodar o ambiente para desenvolvimento
@@ -11,6 +11,8 @@ Em seguida, o comando para rodar o ambiente para desenvolvimento
  Será gerada uma URL com token, basta copiá-la e acessar os arquivos.
 
  Link de apoio: https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
+ 
+ <h3>Ideia</h3>
 
 <h4>Dados são carregados atualizados a cada execução de atualização do modelos: "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv"</h4>
 
